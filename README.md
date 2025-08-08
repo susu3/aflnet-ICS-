@@ -1,24 +1,7 @@
 # AFLNet: A Greybox Fuzzer for Network Protocols
-AFLNet is a greybox fuzzer for protocol implementations. Unlike existing protocol fuzzers, it takes a mutational approach and uses state-feedback, in addition to code-coverage feedback, to guide the fuzzing process. AFLNet is seeded with a corpus of recorded message exchanges between the server and an actual client. No protocol specification or message grammars are required. It acts as a client and replays variations of the original sequence of messages sent to the server and retains those variations that were effective at increasing the coverage of the code or state space. To identify the server states that are exercised by a message sequence, AFLNet uses the server’s response codes. From this feedback, AFLNet identifies progressive regions in the state space, and systematically steers towards such regions.
+AFLNet is a greybox fuzzer for protocol implementations. Unlike existing protocol fuzzers, it takes a mutational approach and uses state-feedback, in addition to code-coverage feedback, to guide the fuzzing process. AFLNet is seeded with a corpus of recorded message exchanges between the server and an actual client. No protocol specification or message grammars are required. It acts as a client and replays variations of the original sequence of messages sent to the server and retains those variations that were effective at increasing the coverage of the code or state space. To identify the server states that are exercised by a message sequence, AFLNet uses the server’s response codes. From this feedback, AFLNet identifies progressive regions in the state space, and systematically steers towards such regions. 
 
-# Licences
-
-AFLNet is licensed under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
-AFLNet is an extension of [American Fuzzy Lop](http://lcamtuf.coredump.cx/afl/) written and maintained by Michał Zalewski <<lcamtuf@google.com>>. For details on American Fuzzy Lop, we refer to [README-AFL.md](README-AFL.md).
-
-* **AFL**: [Copyright](https://github.com/aflsmart/aflsmart/blob/master/docs/README) 2013, 2014, 2015, 2016 Google Inc. All rights reserved. Released under terms and conditions of [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
-# Citing AFLNet
-AFLNet has been accepted for publication as a Testing Tool paper at the IEEE International Conference on Software Testing, Verification and Validation (ICST) 2020. 
-
-```
-@inproceedings{AFLNet,
-author={Van{-}Thuan Pham and Marcel B{\"o}hme and Abhik Roychoudhury},
-title={AFLNet: A Greybox Fuzzer for Network Protocols},
-booktitle={Proceedings of the 13rd IEEE International Conference on Software Testing, Verification and Validation : Testing Tools Track},
-year={2020},}
-```
+**In this forked version, we have added support for several industrial control protocols, including Modbus, Ethernet/IP, IEC 104, DNP3, BACnet/IP, SLAM (both binary and ASCII versions), and the OPC UA CP protocol.**
 
 # Installation (Tested on Ubuntu 18.04 & 16.04 64-bit)
 
